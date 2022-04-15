@@ -1,13 +1,40 @@
-function isPalindrome(word) {
-  // Write your algorithm here
-}
+
+  function reverseString(word) {
+    // create an array from the input string
+    const wordArray = word.split("");
+    // reverse the array
+    const reversedWordArray = wordArray.reverse();
+    // create a string from the reversed array
+    const reversedWord = reversedWordArray.join("");
+    // return the reversed string
+    return reversedWord;
+  }
+  
+  function isPalindrome(word) {
+    // reverse the input string
+    const reversedWord = reverseString(word);
+    // if the reversed string is the same as the input
+    if (word === reversedWord) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 
 /* 
-  Add your pseudocode here
+  // reverse the input string
+  // if the reversed string is the same as the input
+  //   return true
+  // else
+  //   return false
 */
 
 /*
-  Add written explanation of your solution here
+  i wanted to use .reverse function, but it only works on arrays
+  -need to split string into individ elements (into an array)
+  -then reverse those individ elements
+  -then join individ elements/array back into a string
 */
 
 // You can run `node index.js` to view these console logs
